@@ -1,0 +1,12 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="settings_detector_entries">
+        <item>ANPR V1</item>
+        <item>ANPR V2</item>
+    </string-array>
+
+    <string-array name="settings_detector_values">
+        <item>v1</item>
+        <item>v2</item>
+    </string-array>
+</resources>

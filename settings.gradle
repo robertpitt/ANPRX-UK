@@ -1,0 +1,8 @@
+rootProject.name='ANPRX'
+
+// Import the application into scope
+include ':app'
+
+// Import OpenCV vendor module in scope
+include ':opencv'
+project(':opencv').projectDir = new File(OpenCV_DIR + '/sdk')

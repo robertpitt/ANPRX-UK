@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dev.robertpitt.anprX">
+    <!-- Application Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".ANPRXApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.SettingsActivity.SettingsActivity" android:label="@string/title_activity_settings"></activity>
+        <!-- Sentry Configuration -->
+        <meta-data android:name="io.sentry.dsn" android:value="https://81dd3d740667401191e582ef4ac74e6a@o387202.ingest.sentry.io/5222149" />
+        <meta-data android:name="io.sentry.auto-init" android:value="false" /> <!-- Activities -->
+        <activity android:name=".activities.MainActivity.MainActivity" android:label="@string/title_activity_main" android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
