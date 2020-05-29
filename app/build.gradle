@@ -6,6 +6,7 @@ android {
         applicationId "dev.robertpitt.anprX"
         minSdkVersion 21
         targetSdkVersion 28
+        ndkVersion "21.1.6352462"
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
