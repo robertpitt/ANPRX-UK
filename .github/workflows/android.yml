@@ -22,4 +22,4 @@ jobs:
     - name: "Install OpenCV"
       run: "./setup_opencv_android.sh"
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew build -x ":opencv:lint"

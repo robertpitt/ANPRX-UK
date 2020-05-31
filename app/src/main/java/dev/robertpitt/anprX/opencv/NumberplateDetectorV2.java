@@ -1,11 +1,6 @@
 package dev.robertpitt.anprX.opencv;
 
-import android.graphics.Bitmap;
-import android.util.Log;
-
 import androidx.camera.core.ImageProxy;
-
-import com.googlecode.tesseract.android.TessBaseAPI;
 
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
@@ -17,10 +12,8 @@ import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class NumberplateDetectorV2 implements IDetector {
 
@@ -133,8 +126,10 @@ public class NumberplateDetectorV2 implements IDetector {
 
       /**
        * Calculate the contour area and remove contours that are too small in size.
+       *
+       * @note we use Math.abs to handle negative area size, which can happen depending on orientation.
        */
-      double area = Imgproc.contourArea(currentApproxCurve);
+      double area = Math.abs(Imgproc.contourArea(currentApproxCurve));
       if(area < 1000) continue;
 
       /**
